@@ -14,11 +14,13 @@ const paths = {
   vendorScripts: [
     './assets/vendor/moment/min/moment.min.js',
     './assets/vendor/moment/locale/pt-br.js',
+    './assets/vendor/fusioncharts/fusioncharts.js',
     './assets/vendor/angular/angular.min.js',
     './assets/vendor/angular-aria/angular-aria.min.js',
     './assets/vendor/angular-animate/angular-animate.min.js',
     './assets/vendor/angular-material/angular-material.min.js',
-    './assets/vendor/angular-route/angular-route.min.js'
+    './assets/vendor/angular-route/angular-route.min.js',
+    './assets/vendor/angular-fusioncharts/dist/angular-fusioncharts.min.js'
   ]
 };
 
@@ -138,7 +140,7 @@ gulp.task('serve', function () {
 
 // Rerun the task when a file changes
 gulp.task('watch', ['build', 'serve'], function () {
-  gulp.watch('./assets/scss/**/*.scss', ['build']);
+  gulp.watch('./assets/scss/**/*.scss', ['build:assets', 'buid:css']);
   gulp.watch('./app/**/*', ['build:js:dev']);
 });
 
