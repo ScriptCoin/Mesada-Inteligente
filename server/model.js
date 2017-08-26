@@ -2,6 +2,7 @@ var config = require('./config.json')
 var VisaAPIClient = require('./libs/visaapiclient.js');
 var mockData = require('./mock_data.json')
 var ApiAgillitasCartesPrPagos = require('api_agillitas_cartes_pr_pagos')
+var strftime = require('strftime')
 
 module.exports = {
   send_payment: function(clientId, amount) {
@@ -60,5 +61,29 @@ module.exports = {
           }
         });
     })
+  },
+
+  get_card_last_30_days: function(clientId) {
+    return new Promise(function(resolve, reject) {
+      var api = new ApiAgillitasCartesPrPagos.CartoesApi()
+      var agiClientId = config.agilitas.client_id
+      var agiAccessToken = config.agilitas.access_token
+      var clientProxyNum = mockData.clients[clientId].proxyNumber
+
+      var today = strftime('%Y-%m-%d')
+      var beforeTime = new Date
+      beforeTime.setDate(beforeTime.getDate() - 30)
+      var _30daysbefore = strftime('%Y-%m-%d', beforeTime)
+
+
+      api.cartoesIdCartaoExtratoGet(agiClientId, agiAccessToken, mockData.clients[clientId].proxyNumber, _30daysbefore, today, function(error, data, response) {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(data)
+        }
+      })
+    });
+
   }
 }

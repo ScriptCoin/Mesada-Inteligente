@@ -8,19 +8,23 @@ app.put('/addFunds', (req, res) => {
   var clientId = req.query.clientId
   var amount = parseFloat(req.query.amount)
 
-  data_obj = {
-    "clientId": clientId,
-    "amount": amount
-  }
-
   model.send_payment(clientId, amount).then(function() {
     res.json({
-      "data": data_obj,
       "success": null
     });
   }).catch(function(err) {
     res.status(400).json({ //bad request
-      "data": data_obj,
+      "error": err ? err.message : null
+    })
+  })
+})
+
+app.get('/getStatement', (req, res) => {
+  var clientId = req.query.clientId
+  model.get_card_last_30_days(clientId).then(function(data) {
+    res.json(data)
+  }).catch(function(err) {
+    res.status(400).json({ //bad request
       "error": err ? err.message : null
     })
   })
