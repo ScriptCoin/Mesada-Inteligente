@@ -4,15 +4,8 @@ const model = require('./model.js')
 const app = express()
 const PORT = 1234
 
-/**
- * API
- *
- * 
- *
- */
-
 app.put('/addFunds', (req, res) => {
-  var clientId = req.query.client_id
+  var clientId = req.query.clientId
   var amount = parseFloat(req.query.amount)
 
   data_obj = {
@@ -26,7 +19,7 @@ app.put('/addFunds', (req, res) => {
       "success": null
     });
   }).catch(function(err) {
-    res.status(404).json({ //not found
+    res.status(400).json({ //bad request
       "data": data_obj,
       "error": err ? err.message : null
     })
