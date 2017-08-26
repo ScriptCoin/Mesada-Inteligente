@@ -96,7 +96,7 @@ gulp.task('build:js', ['build:js:dev', 'build:js:vendor']);
 
 gulp.task('build:assets:vendor', function () {
   return gulp
-    .src([`./assets/vendor/{${dependenciesToCopy.join(',')}}/**/*`])
+    .src([`./assets/vendor/{${dependenciesToCopy.join(',')},}/**/*`])
     .pipe(gulp.dest(build.assets + '/vendor'));
 });
 

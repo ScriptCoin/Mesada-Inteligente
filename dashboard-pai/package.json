@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "description": "Boilerplate foir AngularJS (1.x) apps",
   "main": "index.html",
-  "dependencies": {
-    "admin-lte": "^2.3.11"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",
     "bower": "^1.8.0",
