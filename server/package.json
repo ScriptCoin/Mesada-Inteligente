@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "api_agillitas_cartes_pr_pagos": "github:Sensedia/hackathon-agitech-agilitas-javascript-client",
+    "express": "^4.15.4",
+    "randomstring": "^1.1.5",
+    "request": "^2.81.0"
+  }
 }
