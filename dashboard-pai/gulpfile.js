@@ -14,8 +14,10 @@ const paths = {
   vendorScripts: [
     './assets/vendor/moment/min/moment.min.js',
     './assets/vendor/moment/locale/pt-br.js',
+    './assets/vendor/fusioncharts/fusioncharts.js',
     './assets/vendor/angular/angular.min.js',
-    './assets/vendor/angular-route/angular-route.min.js'
+    './assets/vendor/angular-route/angular-route.min.js',
+    './assets/vendor/angular-fusioncharts/dist/angular-fusioncharts.min.js'
   ]
 };
 

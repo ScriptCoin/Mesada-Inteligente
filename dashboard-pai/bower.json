@@ -18,6 +18,8 @@
     "angular-route": "^1.6.3",
     "bootstrap": "v4.0.0-alpha.6",
     "components-font-awesome": "^4.7.0",
-    "moment": "^2.18.1"
+    "moment": "^2.18.1",
+    "angular-fusioncharts": "fusioncharts/angular-fusioncharts#v3.0",
+    "fusioncharts": "^3.12.1"
   }
 }

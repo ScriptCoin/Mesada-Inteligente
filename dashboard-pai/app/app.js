@@ -1,4 +1,4 @@
-angular.module('aboilerplate', ['ngRoute'])
+angular.module('aboilerplate', ['ngRoute', 'ng-fusioncharts'])
   .constant('API_BASE_URL', 'https://hidden-fjord-70987.herokuapp.com/')
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -6,6 +6,16 @@ angular.module('aboilerplate', ['ngRoute'])
         name: 'home',
         templateUrl: 'app/page-home/home.html',
         controller: 'HomeController'
+      })
+      .when('/login', {
+        name: 'login',
+        templateUrl: 'app/page-login/login.html',
+        controller: 'LoginController'
+      })
+      .when('/register', {
+        name: 'register',
+        templateUrl: 'app/page-register/register.html',
+        controller: 'RegisterController'
       })
       .when('/not-done', {
         name: 'not-done',
