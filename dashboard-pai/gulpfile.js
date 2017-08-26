@@ -14,8 +14,14 @@ const paths = {
   vendorScripts: [
     './assets/vendor/moment/min/moment.min.js',
     './assets/vendor/moment/locale/pt-br.js',
+    './assets/vendor/fusioncharts/fusioncharts.js',
+    './assets/vendor/fusioncharts/fusioncharts.charts.js',
     './assets/vendor/angular/angular.min.js',
-    './assets/vendor/angular-route/angular-route.min.js'
+    './assets/vendor/angular-aria/angular-aria.min.js',
+    './assets/vendor/angular-animate/angular-animate.min.js',
+    './assets/vendor/angular-material/angular-material.min.js',
+    './assets/vendor/angular-route/angular-route.min.js',
+    './assets/vendor/angular-fusioncharts/dist/angular-fusioncharts.min.js'
   ]
 };
 
@@ -47,7 +53,7 @@ gulp.task('build:css', function () {
     .pipe(gulp.dest(build.css));
 });
 
-gulp.task('build:js:concat:vendor', function () {
+gulp.task('build:js:vendor', function () {
   return gulp.src(paths.vendorScripts)
     .pipe(concat('vendor.js'))
     .pipe(plumber(function (err) {
@@ -58,7 +64,7 @@ gulp.task('build:js:concat:vendor', function () {
     .pipe(gulp.dest(build.root));
 });
 
-gulp.task('build:js:concat', ['build:js:concat:vendor'], function () {
+gulp.task('build:js:concat', function () {
   return gulp.src(['./app/app.js', 'app/**/*.js'])
     .pipe(concat('app.js'))
     .pipe(gulp.dest(build.root));
@@ -74,7 +80,7 @@ gulp.task('build:js:minify', () => {
     .pipe(gulp.dest(build.root));
 });
 
-gulp.task('build:js', ['build:js:concat'], () => {
+gulp.task('build:js:dev', ['build:js:concat'], () => {
   return gulp.src(build.jsFile)
     .pipe(plumber(function (err) {
       console.error('ERROR', err.message);
@@ -86,9 +92,11 @@ gulp.task('build:js', ['build:js:concat'], () => {
     .pipe(gulp.dest(build.root));
 });
 
+gulp.task('build:js', ['build:js:dev', 'build:js:vendor']);
+
 gulp.task('build:assets:vendor', function () {
   return gulp
-    .src([`./assets/vendor/{${dependenciesToCopy.join(',')}}/**/*`])
+    .src([`./assets/vendor/{${dependenciesToCopy.join(',')},}/**/*`])
     .pipe(gulp.dest(build.assets + '/vendor'));
 });
 
@@ -133,8 +141,8 @@ gulp.task('serve', function () {
 
 // Rerun the task when a file changes
 gulp.task('watch', ['build', 'serve'], function () {
-  gulp.watch('./assets/scss/**/*.scss', ['build']);
-  gulp.watch('./app/**/*', ['build:js']);
+  gulp.watch('./assets/scss/**/*.scss', ['build:assets', 'build:css']);
+  gulp.watch('./app/**/*', ['build:js:dev']);
 });
 
 gulp.task('default', ['watch']);

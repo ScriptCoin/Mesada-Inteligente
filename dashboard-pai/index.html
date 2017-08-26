@@ -13,17 +13,60 @@
 
   <link rel="stylesheet" href="build/assets/vendor/components-font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="build/assets/css/app.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <title>AngularJS Boilerplate</title>
 </head>
 
 <body ng-app="aboilerplate" ng-controller="ShellController">
   <header>
-    <h1>AngularJS Boilerplate</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <a href="/"><img class="logo" src="assets/images/logo.png"/></a>
+        </div>
+        <div class="col-8">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent float-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto primary-menu">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <i class="fa fa-list-ul" aria-hidden="true"></i><br/>
+                  Atividades
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fa fa-trophy" aria-hidden="true"></i><br/>
+                  Premiação
+                </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">
+                      <i class="fa fa-list-alt" aria-hidden="true"></i><br/>
+                      Extrato                   
+                    </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">
+                      <i class="fa fa-cc-visa" aria-hidden="true"></i><br/>
+                      Recarga
+                    </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main class="content">
-    <div class="container-fluid">
+    <div class="container">
       <div ng-view></div>
     </div>
   </main>
@@ -31,7 +74,6 @@
   <footer>
     <div>Copyright {{year}}. All rights reserved.</div>
   </footer>
-
   <script src="build/vendor.js"></script>
   <script src="build/app.js"></script>
 </body>

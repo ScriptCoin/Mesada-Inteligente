@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "npm install && bower install && gulp build",
-    "watch": "gulp watch",
+    "watch": "npm install && bower install && gulp watch",
     "prestart": "npm install && bower install",
     "start": "gulp build && gulp serve",
     "deploy": "gulp dist && surge ./",

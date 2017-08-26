@@ -1,2 +1,9 @@
 @import 'components/_general.scss';
 @import 'components/_elastic.directive.scss';
+
+todo-task {
+  display: block;
+  &.completed .md-label {
+    text-decoration: line-through;
+  }
+}
