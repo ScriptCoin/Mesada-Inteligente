@@ -141,7 +141,7 @@ gulp.task('serve', function () {
 
 // Rerun the task when a file changes
 gulp.task('watch', ['build', 'serve'], function () {
-  gulp.watch('./assets/scss/**/*.scss', ['build:assets', 'buid:css']);
+  gulp.watch('./assets/scss/**/*.scss', ['build:assets', 'build:css']);
   gulp.watch('./app/**/*', ['build:js:dev']);
 });
 
