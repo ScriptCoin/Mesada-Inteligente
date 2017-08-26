@@ -1,0 +1,11 @@
+{
+  "clients": {
+    "1" : {
+      "proxyNumber": "3713100019533",
+      "proxyPin": "5381",
+      "cardNumber": "4213040011982379",
+      "cardExpirationMonth": "03",
+      "cardExpirationYear": "2020"
+    }
+  }
+}
