@@ -5,7 +5,7 @@
 
   <hr>
 
-  <section ng-if="!$ctrl.checklist.length" class="templates-container">
+  <section ng-if="!$ctrl.checklist" class="templates-container">
     <h2>Modelos</h2>
     <p>Use nossos modelos criados por especialistas para encaminhar seu filho para uma mesada inteligente</p>
 
@@ -28,7 +28,7 @@
     </div>
   </section>
 
-  <section ng-if="$ctrl.checklist.length" class="tasks-list">
+  <section ng-if="$ctrl.checklist" class="tasks-list">
     <h2>Checklist</h2>
 
     <todo-group name="'Manhã'" tasks="$ctrl.checklist.tasks.groups[0].tasks"></todo-group>
