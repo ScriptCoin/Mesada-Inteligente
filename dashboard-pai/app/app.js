@@ -18,6 +18,12 @@
           templateUrl: 'app/page-register/register.html',
           controller: 'RegisterController'
         })
+        .when('/tasks', {
+          name: 'tasks',
+          templateUrl: 'app/page-tasks/tasks.html',
+          controller: 'TasksController',
+          controllerAs: '$ctrl'
+        })
         .when('/not-done', {
           name: 'not-done',
           templateUrl: 'app/under-construction/under-construction.html',

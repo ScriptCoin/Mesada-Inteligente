@@ -15,6 +15,7 @@ const paths = {
     './assets/vendor/moment/min/moment.min.js',
     './assets/vendor/moment/locale/pt-br.js',
     './assets/vendor/fusioncharts/fusioncharts.js',
+    './assets/vendor/fusioncharts/fusioncharts.charts.js',
     './assets/vendor/angular/angular.min.js',
     './assets/vendor/angular-aria/angular-aria.min.js',
     './assets/vendor/angular-animate/angular-animate.min.js',

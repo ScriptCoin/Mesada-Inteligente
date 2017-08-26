@@ -1,0 +1,13 @@
+<div id="page-tasks">
+  <md-card ng-repeat="template in $ctrl.templates">
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">{{template.title}}</span>
+        <span class="md-subhead">{{template.description}}</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+      {{$ctrl.getTemplateTasksSummary(template)}}
+    </md-card-content>
+  </md-card>
+</div>
