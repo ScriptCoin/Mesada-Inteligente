@@ -1,13 +1,17 @@
 <div id="page-tasks">
-  <md-card ng-repeat="template in $ctrl.templates">
-    <md-card-title>
-      <md-card-title-text>
-        <span class="md-headline">{{template.title}}</span>
-        <span class="md-subhead">{{template.description}}</span>
-      </md-card-title-text>
-    </md-card-title>
-    <md-card-content>
-      {{$ctrl.getTemplateTasksSummary(template)}}
-    </md-card-content>
-  </md-card>
+  <div class="template-card-list row flex-nowrap">
+    <div class="template-card-item col-8 col-sm-5" ng-repeat="template in $ctrl.templates">
+      <md-card class="template-card">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{template.title}}</span>
+            <span class="md-subhead">{{template.description}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          {{$ctrl.getTemplateTasksSummary(template)}}
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
 </div>
