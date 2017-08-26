@@ -1,5 +1,9 @@
-angular.module('aboilerplate')
-  .controller('TasksController', ['RestService', function TasksController(RestService) {
+(function () {
+  angular.module('aboilerplate')
+    .controller('TasksController', TasksController);
+
+  TasksController.$inject = ['RestService'];
+  function TasksController(RestService) {
     var $ctrl = this;
 
     $ctrl.templates = null;
@@ -17,6 +21,13 @@ angular.module('aboilerplate')
       $ctrl.templates = templates;
     }
 
+    function selectTemplate(template) {
+      $ctrl.checklist = angular.copy(template);
+    }
+
+    init();
+
+    // helpers
     function getTemplateTasksSummary(template) {
       var grouppedTasks = template.tasks.groups
         .map(g => g.tasks)
@@ -24,6 +35,5 @@ angular.module('aboilerplate')
 
       return grouppedTasks.map(t => t.title).splice(0, 5).join(', ');
     }
-
-    init();
-  }]);
+  }
+}());

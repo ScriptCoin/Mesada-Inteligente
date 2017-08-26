@@ -1,0 +1,14 @@
+#page-tasks {
+  .template-card {
+    .md-headline {
+      font-weight: bold;
+    }
+    .md-subhead {
+      padding: 0;
+    }
+    md-card-content {
+      color: $text-color-light;
+      font-size: .8em;
+    }
+  }
+}
