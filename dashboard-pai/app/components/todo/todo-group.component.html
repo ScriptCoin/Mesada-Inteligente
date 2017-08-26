@@ -1,0 +1,8 @@
+<span class="todo-group-name">{{$ctrl.name}}</span>
+<div class="todo-group-tasks">
+  <todo-task ng-repeat="task in $ctrl.tasks"
+    class="todo-group-task"
+    completed="task.completed"
+    data-title="task.title"
+    coins="task.coins"></todo-task>
+</div>

@@ -8,6 +8,7 @@
 
     $ctrl.templates = null;
     $ctrl.getTemplateTasksSummary = getTemplateTasksSummary;
+    $ctrl.selectTemplate = selectTemplate;
 
     function init() {
       fetchData();

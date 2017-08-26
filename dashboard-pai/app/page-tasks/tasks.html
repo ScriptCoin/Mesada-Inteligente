@@ -5,13 +5,15 @@
 
   <hr>
 
-  <section class="templates-container">
+  <section ng-if="$ctrl.checklist.length" class="templates-container">
     <h2>Modelos</h2>
     <p>Use nossos modelos criados por especialistas para encaminhar seu filho para uma mesada inteligente</p>
 
     <div class="template-card-list row flex-nowrap align-items-stretch">
-      <div class="template-card-item col-{{$ctrl.templates/12}} d-flex align-items-stretch" ng-repeat="template in $ctrl.templates">
-        <md-card class="template-card" ng-click>
+      <div ng-repeat="template in $ctrl.templates"
+        class="template-card-item col-{{$ctrl.templates/12}} d-flex align-items-stretch">
+        <md-card class="template-card"
+          ng-click="$ctrl.selectTemplate(template)">
           <md-card-title>
             <md-card-title-text>
               <span class="md-headline">{{template.title}}</span>
@@ -26,9 +28,9 @@
     </div>
   </section>
 
-  <section class="tasks-list">
+  <section ng-if="$ctrl.checklist.length" class="tasks-list">
     <h2>Checklist</h2>
-    <todo-task completed="true" data-title="'Lavar louça'" coins="1"></todo-task>
-    <todo-task completed="false" data-title="'Comer'" coins="12"></todo-task>
+
+    <todo-group name="'Manhã'" tasks="$ctrl.checklist.tasks.groups[0].tasks"></todo-group>
   </section>
 </div>
