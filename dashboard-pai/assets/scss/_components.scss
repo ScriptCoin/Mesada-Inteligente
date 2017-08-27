@@ -1,9 +1,32 @@
 @import 'components/_general.scss';
 @import 'components/_elastic.directive.scss';
-
 todo-task {
   display: block;
   &.completed .md-label {
     text-decoration: line-through;
+  }
+}
+
+tasks-card-with-table {
+  md-card-content,
+  .table,
+  md-checkbox {
+    padding: 0;
+    margin: 0;
+  }
+  .table {
+    .task-header {
+      width: 100%;
+    }
+    td,
+    th {
+      &:first-child {
+        padding-left: 16px;
+      }
+      &:last-child {
+        padding-right: 16px;
+      }
+      vertical-align: middle;
+    }
   }
 }

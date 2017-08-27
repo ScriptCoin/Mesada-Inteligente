@@ -1,0 +1,59 @@
+{
+  "date": "2017-08-26",
+  "userId": 2,
+  "groups": [{
+    "name": "Manhã",
+    "tasks": [{
+      "title": "Arrumar a cama",
+      "completed": false,
+      "coins": 1,
+      "contested": false
+    }, {
+      "title": "Preparar o próprio lanche da escola",
+      "completed": true,
+      "coins": 1,
+      "contested": false
+    }]
+  }, {
+    "name": "Tarde",
+    "tasks": [{
+      "title": "Preparar o próprio lanche da tarde",
+      "completed": false,
+      "coins": 1,
+      "contested": false
+    }, {
+      "title": "Limpar móveis",
+      "completed": false,
+      "coins": 1,
+      "contested": false
+    }, {
+      "title": "Limpar espelhos",
+      "completed": false,
+      "coins": 1,
+      "contested": false
+    }, {
+      "title": "Cuidar dos pets",
+      "completed": false,
+      "coins": 1,
+      "contested": false
+    }]
+  }, {
+    "name": "Noite",
+    "tasks": [{
+      "title": "Ajudar no preparo do jantar",
+      "completed": false,
+      "coins": 1,
+      "contested": false
+    }, {
+      "title": "Guardar louça",
+      "completed": false,
+      "coins": 1,
+      "contested": false
+    }, {
+      "title": "Fazer lista de mercado",
+      "completed": false,
+      "coins": 1,
+      "contested": false
+    }]
+  }]
+}
