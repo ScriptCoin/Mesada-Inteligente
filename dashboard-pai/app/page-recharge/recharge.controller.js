@@ -8,6 +8,8 @@
 
     $ctrl.mesada = 300;
 
+    $ctrl.rechargeDone = false;
+
     $ctrl.prize = null;
     $ctrl.formatDate = formatDate;
     $ctrl.transfer = transfer;
@@ -43,7 +45,7 @@
     }
 
     function handleSuccess() {
-      alert(`Transferência executada com sucesso!`);
+      $ctrl.rechargeDone = true;
       $ctrl.isLoading = false;
     }
 

@@ -29,6 +29,27 @@
     display: block;
     text-align: right;
   }
+  .recharge-done {
+    font-size: 2rem;
+    .icons {
+      position: relative;
+      font-size: 2em;
+    }
+    .icon-main {
+      color: #1a1f71;
+      font-size: 2em;
+    }
+    .icon-secondary {
+      position: absolute;
+      top: 0em;
+      color: #f7b600;
+      transform: translate(1em);
+    }
+    .text {
+      margin-top: -1em;
+      text-align: center;
+    }
+  }
 }
 
 #page-recharge {

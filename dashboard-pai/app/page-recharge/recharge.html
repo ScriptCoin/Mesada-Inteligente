@@ -6,7 +6,7 @@
   <hr ng-if="!$ctrl.isLoading">
   <md-progress-linear ng-if="$ctrl.isLoading" md-mode="indeterminate"></md-progress-linear>
   
-  <div ng-if="$ctrl.score.score">
+  <div ng-if="$ctrl.score.score && !$ctrl.rechargeDone">
     <section class="row cards-container">
       <div class="col-12 col-md-6 my-card">
         <h2 class="card-title">Cartão de origem</h2>
@@ -83,6 +83,15 @@
         </div>
       </div>
     </section>
+  </div>
+
+  <div ng-if="$ctrl.rechargeDone"
+    class="recharge-done flex-column">
+    <div class="icons d-flex justify-content-center">
+      <fa-icon icon="cc-visa" class="icon icon-main"></fa-icon>
+      <fa-icon icon="check-circle-o" class="icon icon-secondary"></fa-icon>
+    </div>
+    <p class="text">Transferência efetuada com sucesso!</p>
   </div>
 
 </div>
