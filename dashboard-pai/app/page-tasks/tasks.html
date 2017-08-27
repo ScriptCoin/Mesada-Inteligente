@@ -6,7 +6,7 @@
   <hr ng-if="!$ctrl.isLoading">
   <md-progress-linear ng-if="$ctrl.isLoading" md-mode="indeterminate"></md-progress-linear>
 
-  <section ng-if="$ctrl.templates" class="templates-container">
+  <section ng-if="!$ctrl.showChecklist && !$ctrl.isLoading" class="templates-container">
     <header class="row">
       <div class="col-12 col-md-8 col-lg-6">
         <h2>Modelos</h2>
@@ -33,21 +33,23 @@
     </div>
   </section>
 
-  <div class="row justify-content-center">
-    <tasks-card-with-table
-      class="col-12 col-md-8"
-      data-title="'Hoje'"
-      tasks="$ctrl.todayTasks"></tasks-card-with-table>
-  </div>
+  <div ng-if="$ctrl.showChecklist && !$ctrl.isLoading">
+    <div class="row justify-content-center">
+      <tasks-card-with-table
+        class="col-12 col-md-8"
+        data-title="'Hoje'"
+        tasks="$ctrl.todayTasks"></tasks-card-with-table>
+    </div>
 
-  <div class="row justify-content-center">
-    <tasks-card-with-table
-      class="col-12 col-md-6"
-      data-title="'Esta semana'"
-      tasks="$ctrl.todayTasks"></tasks-card-with-table>
-    <tasks-card-with-table
-      class="col-12 col-md-6"
-      data-title="'Mais antigos'"
-      tasks="$ctrl.todayTasks"></tasks-card-with-table>
+    <div class="row justify-content-center">
+      <tasks-card-with-table
+        class="col-12 col-md-6"
+        data-title="'Esta semana'"
+        tasks="$ctrl.todayTasks"></tasks-card-with-table>
+      <tasks-card-with-table
+        class="col-12 col-md-6"
+        data-title="'Mais antigos'"
+        tasks="$ctrl.todayTasks"></tasks-card-with-table>
+    </div>
   </div>
 </div>
