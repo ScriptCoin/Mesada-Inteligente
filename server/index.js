@@ -7,13 +7,15 @@ const app = express()
 
 const PORT = process.env.PORT ? process.env.PORT : 1234
 
+app.options('*', cors())
+
 app.put('/addFunds', cors(), (req, res) => {
   var clientId = req.query.clientId
   var amount = parseFloat(req.query.amount)
 
   model.send_payment(clientId, amount).then(function() {
     res.json({
-      "success": null
+      "success": true
     });
   }).catch(function(err) {
     res.status(400).json({ //bad request
