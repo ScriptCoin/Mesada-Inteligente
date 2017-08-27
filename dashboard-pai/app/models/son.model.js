@@ -6,7 +6,7 @@
       son = son || {};
 
       return {
-        name: son.name,
+        firstname: son.firstname,
         cpf: son.cpf || null,
         gender: son.gender || ''
       };

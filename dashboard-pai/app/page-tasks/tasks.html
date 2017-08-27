@@ -6,8 +6,12 @@
   <hr>
 
   <section ng-if="!$ctrl.checklist" class="templates-container">
-    <h2>Modelos</h2>
-    <p>Use nossos modelos criados por especialistas para encaminhar seu filho para uma mesada inteligente</p>
+    <header class="row">
+      <div class="col-12 col-md-8 col-lg-6">
+        <h2>Modelos</h2>
+        <p>Use nossos modelos criados por especialistas para encaminhar seu filho para uma mesada inteligente</p>
+      </div>
+    </header>
 
     <div class="template-card-list row flex-nowrap align-items-stretch">
       <div ng-repeat="template in $ctrl.templates"

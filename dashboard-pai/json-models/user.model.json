@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "firstname": "Roberto",
+  "lastname": "Amaral",
+  "cpf": "68618979066",
+  "dependents": [{
+    "id": 2,
+    "firstname": "João",
+    "lastname": "Amaral",
+    "cpf": "21414447051",
+    "gender": "M"
+  }]
+}
