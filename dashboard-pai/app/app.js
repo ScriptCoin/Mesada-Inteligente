@@ -1,5 +1,5 @@
 (function () {
-  angular.module('aboilerplate', ['ngMaterial', 'ngRoute', 'ng-fusioncharts'])
+  angular.module('aboilerplate', ['ngMaterial', 'ngRoute', 'ng-fusioncharts', 'firebase'])
     .constant('API_BASE_URL', 'https://hidden-fjord-70987.herokuapp.com/')
     .config(function ($routeProvider, $locationProvider) {
       $routeProvider
@@ -46,12 +46,26 @@
       // configure html5 to get links working on jsfiddle
       $locationProvider.html5Mode(false);
     })
-    .config(configureTheme);
+    .config(configureTheme)
+    .config(configureFirebase);
 
   configureTheme.$inject = ['$mdThemingProvider'];
   function configureTheme($mdThemingProvider) {
     $mdThemingProvider.theme('default')
       .primaryPalette('blue')
       .accentPalette('red');
+  }
+
+  function configureFirebase() {
+    // Initialize Firebase
+    var firebaseConfig = {
+      apiKey: "AIzaSyC93XS4v13wBVcwTdF8Y06wkwTKlxTRv7A",
+      authDomain: "mesadainteligente.firebaseapp.com",
+      databaseURL: "https://mesadainteligente.firebaseio.com",
+      projectId: "mesadainteligente",
+      storageBucket: "mesadainteligente.appspot.com",
+      messagingSenderId: "84646453780"
+    };
+    firebase.initializeApp(firebaseConfig);
   }
 }());

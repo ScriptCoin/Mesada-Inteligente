@@ -2,8 +2,8 @@
   angular.module('aboilerplate')
     .controller('TasksController', TasksController);
 
-  TasksController.$inject = ['RestService'];
-  function TasksController(RestService) {
+  TasksController.$inject = ['RestService', 'FirebaseService'];
+  function TasksController(RestService, FirebaseService) {
     var $ctrl = this;
 
     $ctrl.templates = null;
@@ -16,6 +16,7 @@
     }
 
     function fetchData() {
+      $scope.tasks = FirebaseService.getTasks(1, 2);
       RestService.getTasks(2).then(tasks => {
         if (!tasks)
           loadTemplates();
