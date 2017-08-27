@@ -8,13 +8,15 @@
 
   <meta name="theme-color" content="#239dce">
   <meta name="description" content="Boilerplate code">
-
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  
   <base href="/">
 
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jessepollak/card/v0.1.4/lib/css/card.css">
   <link rel="stylesheet" href="build/assets/vendor/components-font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="build/assets/css/app.css">
 
-  <title>AngularJS Boilerplate</title>
+  <title>Mesada Inteligente - $criptCoin</title>
 </head>
 
 <body ng-app="aboilerplate" ng-controller="ShellController as $ctrl">
@@ -25,7 +27,7 @@
           <a href="/"><img class="logo" src="assets/images/logo.png"/></a>
         </div>
         <div class="col-8">
-            <nav class="navbar navbar-expand-md navbar-light bg-transparent float-right">
+            <nav class="navbar navbar-expand-sm navbar-light bg-transparent float-right">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -75,7 +77,11 @@
   <footer>
     <div>Copyright {{year}}. All rights reserved.</div>
   </footer>
-  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>  
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
   <script src="build/vendor.js"></script>
   <script src="build/app.js"></script>
 </body>

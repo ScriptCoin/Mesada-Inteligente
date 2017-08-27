@@ -22,6 +22,7 @@ const paths = {
     './assets/vendor/angular-animate/angular-animate.min.js',
     './assets/vendor/angular-material/angular-material.min.js',
     './assets/vendor/angular-route/angular-route.min.js',
+    './assets/vendor/angularfire/dist/angularfire.min.js',
     './assets/vendor/angular-fusioncharts/dist/angular-fusioncharts.min.js'
   ]
 };
