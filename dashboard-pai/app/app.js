@@ -18,10 +18,22 @@
           templateUrl: 'app/page-register/register.html',
           controller: 'RegisterController'
         })
-        .when('/tasks', {
-          name: 'tasks',
+        .when('/atividades', {
+          name: 'activities',
           templateUrl: 'app/page-tasks/tasks.html',
           controller: 'TasksController',
+          controllerAs: '$ctrl'
+        })
+        .when('/premiacao', {
+          name: 'prize',
+          templateUrl: 'app/page-prize/prize.html',
+          controller: 'PrizeController',
+          controllerAs: '$ctrl'
+        })
+        .when('/recarga', {
+          name: 'recharge',
+          templateUrl: 'app/page-recharge/recharge.html',
+          controller: 'RechargeController',
           controllerAs: '$ctrl'
         })
         .when('/not-done', {
@@ -39,7 +51,7 @@
   configureTheme.$inject = ['$mdThemingProvider'];
   function configureTheme($mdThemingProvider) {
     $mdThemingProvider.theme('default')
-      .primaryPalette('light-green')
+      .primaryPalette('blue')
       .accentPalette('red');
   }
 }());

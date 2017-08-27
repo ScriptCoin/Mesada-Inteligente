@@ -1,0 +1,27 @@
+<md-card>
+  <md-card-title>
+    <md-card-title-text>{{$ctrl.title}}</md-card-title-text>
+  </md-card-title>
+  <md-card-content>
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th>Feito</th>
+          <th class="task-header">Tarefa</th>
+          <th><span class="sr-only">Contestar</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="task in $ctrl.tasks">
+          <td><md-checkbox ng-model="task.completed" disabled></md-checkbox></td>
+          <td>{{task.title}}</td>
+          <td>
+            <md-button ng-disabled="!task.completed || task.contested"
+              ng-click="$ctrl.contest(task)"
+              class="md-raised md-accent">Não feito</md-button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>

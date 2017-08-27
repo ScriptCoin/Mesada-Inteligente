@@ -1,13 +1,17 @@
 <div id="page-tasks">
   <h1 class="page-title">
-    Tarefas
+    Atividades
   </h1>
 
   <hr>
 
-  <section ng-if="!$ctrl.checklist" class="templates-container">
-    <h2>Modelos</h2>
-    <p>Use nossos modelos criados por especialistas para encaminhar seu filho para uma mesada inteligente</p>
+  <section ng-if="$ctrl.templates" class="templates-container">
+    <header class="row">
+      <div class="col-12 col-md-8 col-lg-6">
+        <h2>Modelos</h2>
+        <p>Use nossos modelos criados por especialistas para encaminhar seu filho para uma mesada inteligente</p>
+      </div>
+    </header>
 
     <div class="template-card-list row flex-nowrap align-items-stretch">
       <div ng-repeat="template in $ctrl.templates"
@@ -28,9 +32,10 @@
     </div>
   </section>
 
-  <section ng-if="$ctrl.checklist" class="tasks-list">
-    <h2>Checklist</h2>
+  <tasks-card-with-table data-title="'Hoje'" tasks="$ctrl.todayTasks"></tasks-card-with-table>
 
-    <todo-group name="'Manhã'" tasks="$ctrl.checklist.tasks.groups[0].tasks"></todo-group>
-  </section>
+  <tasks-card-with-table data-title="'Esta semana'" tasks="$ctrl.todayTasks"></tasks-card-with-table>
+  
+  <tasks-card-with-table data-title="'Mais antigos'" tasks="$ctrl.todayTasks"></tasks-card-with-table>
+
 </div>

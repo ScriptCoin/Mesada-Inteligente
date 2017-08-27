@@ -1,12 +1,12 @@
 (function () {
-  angular.module('aboilerplate').factory('Son', Son);
+  angular.module('aboilerplate').factory('SonTasks', SonTasks);
 
-  function Son() {
+  function SonTasks() {
     return function constructor(son) {
       son = son || {};
 
       return {
-        firstname: son.firstname,
+        name: son.name,
         cpf: son.cpf || null,
         gender: son.gender || ''
       };

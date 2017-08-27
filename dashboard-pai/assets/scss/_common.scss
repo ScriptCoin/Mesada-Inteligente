@@ -73,10 +73,15 @@ body {
   flex: 1;
 }
 
-header {
+header.site-header {
   background-color: $brand-primary;
   color: $text-color-inverse;
   padding: .5rem 2rem;
+  .nav-item {
+    .nav-link {
+      color: #fff;
+    }
+  }
 }
 
 footer {
