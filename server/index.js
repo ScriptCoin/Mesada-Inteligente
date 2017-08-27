@@ -15,7 +15,7 @@ app.put('/addFunds', cors(), (req, res) => {
 
   model.send_payment(clientId, amount).then(function() {
     res.json({
-      "success": null
+      "success": true
     });
   }).catch(function(err) {
     res.status(400).json({ //bad request
