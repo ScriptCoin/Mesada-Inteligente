@@ -1,0 +1,6 @@
+framework module Pods_MesadaInteligente {
+  umbrella header "Pods-MesadaInteligente-umbrella.h"
+
+  export *
+  module * { export * }
+}
