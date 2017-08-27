@@ -81,9 +81,6 @@ header.site-header {
     .nav-link {
       color: #fff;
     }
-    &.active .nav-link {
-      color: lighten($brand-primary, 30%);
-    }
   }
 }
 
