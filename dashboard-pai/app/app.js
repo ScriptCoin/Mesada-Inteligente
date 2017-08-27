@@ -18,8 +18,8 @@
           templateUrl: 'app/page-register/register.html',
           controller: 'RegisterController'
         })
-        .when('/tasks', {
-          name: 'tasks',
+        .when('/atividades', {
+          name: 'activities',
           templateUrl: 'app/page-tasks/tasks.html',
           controller: 'TasksController',
           controllerAs: '$ctrl'

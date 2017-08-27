@@ -7,6 +7,7 @@
     var $ctrl = this;
 
     $ctrl.templates = null;
+    $ctrl.todayTasks = null;
     $ctrl.getTemplateTasksSummary = getTemplateTasksSummary;
     $ctrl.selectTemplate = selectTemplate;
 
@@ -15,15 +16,28 @@
     }
 
     function fetchData() {
-      RestService.getTemplates().then(onFetchTemplates);
+      RestService.getTasks(2).then(tasks => {
+        if (!tasks)
+          loadTemplates();
+        else
+          setTasks(tasks);
+      });
     }
 
-    function onFetchTemplates(templates) {
+    function loadTemplates() {
+      return RestService.getTemplates().then(setTemplates);
+    }
+
+    function setTemplates(templates) {
       $ctrl.templates = templates;
     }
 
     function selectTemplate(template) {
-      $ctrl.checklist = angular.copy(template);
+      setTasks(angular.copy(template.tasks));
+    }
+
+    function setTasks(tasks) {
+      $ctrl.todayTasks = tasks;
     }
 
     init();
