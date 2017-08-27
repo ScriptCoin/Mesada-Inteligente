@@ -12,6 +12,18 @@
             }
         }
     }
+    @media (max-width: 800px) {
+        font-size: .8em;
+        .nav-item {
+            margin-left: 5px;
+        }
+    }
+    @media (max-width: 500px) {
+        font-size: .5em;
+        .nav-item {
+            margin-left: 0px;
+        }
+    }
 }
 
 

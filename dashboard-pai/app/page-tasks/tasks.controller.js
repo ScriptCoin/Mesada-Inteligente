@@ -16,7 +16,7 @@
     }
 
     function fetchData() {
-      $scope.tasks = FirebaseService.getTasks(1, 2);
+      $ctrl.tasks = FirebaseService.getTasks(1, 2);
       RestService.getTasks(2).then(tasks => {
         if (!tasks)
           loadTemplates();
