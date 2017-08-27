@@ -13,9 +13,6 @@ angular.module('aboilerplate')
       $ctrl.todayTasks.$loaded()
         .then(() => $ctrl.isLoading = false);
     }
-    function setTasks(tasks) {
-      $ctrl.todayTasks = tasks;
-    }
 
     init();
   }]);

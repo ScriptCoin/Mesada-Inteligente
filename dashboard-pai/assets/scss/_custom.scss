@@ -1,34 +1,37 @@
-.logo{
-    margin-top: 10px;
+.logo {
+  margin-top: 10px;
 }
-.primary-menu{
+
+.primary-menu {
   flex-direction: row;
   justify-content: flex-end;
-    li{
-        margin-left: 15px;
-        text-align: center;
-        a{
-            
-            i.fa{
-                font-size: 30px !important;
-            }
-        }
+  li {
+    margin-left: 15px;
+    text-align: center;
+    a {
+      i.fa {
+        font-size: 30px !important;
+      }
     }
-    @media (max-width: 800px) {
-        font-size: .8em;
-        .nav-item {
-            margin-left: 5px;
-        }
+  }
+  @media (max-width: 800px) {
+    font-size: .8em;
+    .nav-item {
+      margin-left: 5px;
     }
-    @media (max-width: 500px) {
-        font-size: .5em;
-        .nav-item {
-            margin-left: 0px;
-        }
+  }
+  @media (max-width: 500px) {
+    font-size: .5em;
+    .nav-item {
+      margin-left: 0px;
     }
-
+  }
 }
 
+.card-with-no-effect md-card {
+  box-shadow: none;
+  margin: 0;
+}
 
 /*!
  *   AdminLTE v2.4.0

@@ -6,7 +6,8 @@
         .when('/', {
           name: 'home',
           templateUrl: 'app/page-home/home.html',
-          controller: 'HomeController'
+          controller: 'HomeController',
+          controllerAs: '$ctrl'
         })
         .when('/login', {
           name: 'login',

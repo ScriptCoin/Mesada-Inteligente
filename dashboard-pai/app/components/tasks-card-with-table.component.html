@@ -1,5 +1,5 @@
 <md-card ng-if="$ctrl.tasks.groups.length">
-  <md-card-title>
+  <md-card-title ng-if="!!$ctrl.title">
     <md-card-title-text>{{$ctrl.title}}</md-card-title-text>
   </md-card-title>
   <md-card-content>
@@ -32,4 +32,4 @@
   </md-card-content>
 </md-card>
 
-<!-- <pre><code>{{$ctrl.tasks|json}}</code></pre> -->
+ <!-- <pre><code>{{$ctrl.tasks|json}}</code></pre>  -->
