@@ -30,6 +30,12 @@
           controller: 'PrizeController',
           controllerAs: '$ctrl'
         })
+        .when('/extrato', {
+          name: 'statement',
+          templateUrl: 'app/page-statement/statement.html',
+          controller: 'StatementController',
+          controllerAs: '$ctrl'
+        })
         .when('/recarga', {
           name: 'recharge',
           templateUrl: 'app/page-recharge/recharge.html',

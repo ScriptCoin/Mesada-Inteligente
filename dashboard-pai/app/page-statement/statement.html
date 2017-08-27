@@ -1,0 +1,25 @@
+<div id="page-statement">
+  <h1 class="page-title">
+    Extrato
+  </h1>
+
+  <hr>
+
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th class="transaction-header">Transação</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in $ctrl.statementData.extrato">
+        <td>{{$ctrl.formatDate(item.date)}}</td>
+        <td>{{item.transaction}}</td>
+        <td class="value"
+          ng-class="{ positive: item.value > 0, negative: item.value < 0 }">{{item.value|currency}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

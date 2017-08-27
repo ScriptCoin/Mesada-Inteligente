@@ -30,3 +30,18 @@
     text-align: right;
   }
 }
+
+#page-statement {
+  .transaction-header {
+    width: 100%;
+  }
+  .value {
+    font-weight: bold;
+    &.positive {
+      color: #080;
+    }
+    &.negative {
+      color: #800;
+    }
+  }
+}

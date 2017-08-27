@@ -1,41 +1,22 @@
 (function () {
   angular.module('aboilerplate')
-    .controller('RechargeController', RechargeController);
+    .controller('StatementController', StatementController);
 
-  RechargeController.$inject = ['RestService'];
-  function RechargeController(RestService) {
+  StatementController.$inject = ['RestService'];
+  function StatementController(RestService) {
     var $ctrl = this;
 
-    $ctrl.mesada = 300;
-    $ctrl.score = 819;
-
-    $ctrl.prize = null;
+    $ctrl.statementData = null;
     $ctrl.formatDate = formatDate;
-    $ctrl.transfer = transfer;
-    $ctrl.scoreToMoney = scoreToMoney;
 
     function init() {
-      $ctrl.value = scoreToMoney($ctrl.score);
+      fetchData();
     }
 
     function fetchData() {
-    }
-
-    function setPrize(prize) {
-      $ctrl.prize = prize;
-    }
-
-    function scoreToMoney(score) {
-      return Math.floor(($ctrl.mesada / 1000) * score);
-    }
-
-    function transfer(value) {
-      RestService.addFunds(1, value)
+      RestService.getStatement(1)
+        .then(setStatementData)
         .catch(handleError);
-    }
-
-    function handleSuccess() {
-      alert(`Transferência executada com sucesso!`)
     }
 
     function handleError(error) {
@@ -43,11 +24,15 @@
       alert(`Desculpe, ocorreu um erro. Tente novamente mais tarde.\n\nDetalhes: ${error || 'serviço indisponível'}`)
     }
 
+    function setStatementData(statementData) {
+      $ctrl.statementData = statementData;
+    }
+
     init();
 
     // helpers
     function formatDate(date) {
-      return moment(date).format('LL');
+      return moment(date).format('L');
     }
 
     function getTemplateTasksSummary(template) {

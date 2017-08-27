@@ -3,8 +3,8 @@
 
   var baseUrl = 'http://aqueous-taiga-69422.herokuapp.com'; // getStatement?clientId=1
 
-  RestService.$inject = ['$http', '$q', 'Son'];
-  function RestService($http, $q, Son) {
+  RestService.$inject = ['$http', '$q', 'Son', 'StatementItem'];
+  function RestService($http, $q, Son, StatementItem) {
     function getSons() {
       return $http.get('/json-models/user.model.json')
         .then(extractData)
@@ -33,10 +33,14 @@
     }
 
     function getStatement(parentId) {
-      return $http.put(`${baseUrl}/getStatement?clientId=${parentId}`)
-        .then(extractData);
+      return $http.get(`${baseUrl}/getStatement?clientId=${parentId}`)
+        .then(extractData)
+        .then(data => {
+          data.extrato = (data.extrato || []).map(i => StatementItem(i));
+          return data;
+        });
     }
 
-    return { getSons, getTemplates, getTasks, getPrize, addFunds };
+    return { getSons, getTemplates, getTasks, getPrize, addFunds, getStatement };
   }
 }())
