@@ -1,4 +1,5 @@
 const express = require('express')
+const process = require('process')
 const config = require('./config.json')
 const model = require('./model.js')
 const app = express()
