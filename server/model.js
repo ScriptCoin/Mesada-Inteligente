@@ -65,7 +65,6 @@ module.exports = {
 
   get_card_last_30_days: function(clientId) {
     return new Promise(function(resolve, reject) {
-      var api = new ApiAgillitasCartesPrPagos.CartoesApi()
       var agiClientId = config.agilitas.client_id
       var agiAccessToken = config.agilitas.access_token
       var clientProxyNum = mockData.clients[clientId].proxyNumber
@@ -76,13 +75,34 @@ module.exports = {
       var _30daysbefore = strftime('%Y-%m-%d', beforeTime)
 
 
-      api.cartoesIdCartaoExtratoGet(agiClientId, agiAccessToken, mockData.clients[clientId].proxyNumber, _30daysbefore, today, function(error, data, response) {
-        if (error) {
-          reject(error);
-        } else {
-          resolve(data)
-        }
+      var extratoGetCallback = new Promise(function(resolve, reject) {
+        var api = new ApiAgillitasCartesPrPagos.CartoesApi()
+        api.cartoesIdCartaoExtratoGet(agiClientId, agiAccessToken, mockData.clients[clientId].proxyNumber, _30daysbefore, today, function(error, data, response) {
+          if (error) {
+            reject(error);
+          } else {
+            resolve(data)
+          }
+        })
+      });
+
+      var saldoGetCallback = new Promise(function(resolve, reject) {
+        var api = new ApiAgillitasCartesPrPagos.CartoesApi()
+        api.cartoesIdCartaoSaldoGet(agiClientId, agiAccessToken, mockData.clients[clientId].proxyNumber, function(error, data, response) {
+          if (error) {
+            reject(error);
+          } else {
+            resolve(data);
+          }
+        })
       })
+
+      Promise.all([extratoGetCallback, saldoGetCallback]).then(function(data) {
+        data[0]['saldo'] = data[1].saldo.valor
+        resolve(data[0])
+      }).catch(function(error) {
+        reject(error);
+      });
     });
 
   }
