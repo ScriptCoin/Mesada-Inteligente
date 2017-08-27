@@ -2,6 +2,8 @@
     margin-top: 10px;
 }
 .primary-menu{
+  flex-direction: row;
+  justify-content: flex-end;
     li{
         margin-left: 25px;
         text-align: center;
