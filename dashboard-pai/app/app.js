@@ -30,6 +30,12 @@
           controller: 'PrizeController',
           controllerAs: '$ctrl'
         })
+        .when('/recarga', {
+          name: 'recharge',
+          templateUrl: 'app/page-recharge/recharge.html',
+          controller: 'RechargeController',
+          controllerAs: '$ctrl'
+        })
         .when('/not-done', {
           name: 'not-done',
           templateUrl: 'app/under-construction/under-construction.html',
