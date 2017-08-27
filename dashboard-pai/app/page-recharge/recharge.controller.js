@@ -2,12 +2,11 @@
   angular.module('aboilerplate')
     .controller('RechargeController', RechargeController);
 
-  RechargeController.$inject = ['RestService'];
-  function RechargeController(RestService) {
+  RechargeController.$inject = ['RestService', 'FirebaseService'];
+  function RechargeController(RestService, FirebaseService) {
     var $ctrl = this;
 
     $ctrl.mesada = 300;
-    $ctrl.score = 819;
 
     $ctrl.prize = null;
     $ctrl.formatDate = formatDate;
@@ -15,10 +14,17 @@
     $ctrl.scoreToMoney = scoreToMoney;
 
     function init() {
-      $ctrl.value = scoreToMoney($ctrl.score);
+      $ctrl.value = scoreToMoney(0);
+      fetchData();
     }
 
     function fetchData() {
+      $ctrl.isLoading = true;
+      $ctrl.score = FirebaseService.getScore(1, 2);
+
+      $ctrl.score.$loaded()
+        .then(() => $ctrl.value = scoreToMoney($ctrl.score.score))
+        .then(() => $ctrl.isLoading = false);
     }
 
     function setPrize(prize) {
@@ -30,17 +36,21 @@
     }
 
     function transfer(value) {
+      $ctrl.isLoading = true;
       RestService.addFunds(1, value)
+        .then(handleSuccess)
         .catch(handleError);
     }
 
     function handleSuccess() {
-      alert(`Transferência executada com sucesso!`)
+      alert(`Transferência executada com sucesso!`);
+      $ctrl.isLoading = false;
     }
 
     function handleError(error) {
       console.error('Error', error);
       alert(`Desculpe, ocorreu um erro. Tente novamente mais tarde.\n\nDetalhes: ${error || 'serviço indisponível'}`)
+      $ctrl.isLoading = false;
     }
 
     init();
