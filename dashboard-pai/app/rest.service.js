@@ -1,6 +1,8 @@
 (function () {
   angular.module('aboilerplate').factory('RestService', RestService);
 
+  var baseUrl = 'http://aqueous-taiga-69422.herokuapp.com'; // getStatement?clientId=1
+
   RestService.$inject = ['$http', '$q', 'Son'];
   function RestService($http, $q, Son) {
     function getSons() {
@@ -25,6 +27,16 @@
       return response.data;
     }
 
-    return { getSons, getTemplates, getTasks, getPrize };
+    function addFunds(parentId, funds) {
+      return $http.put(`${baseUrl}/addFunds?clientId=${parentId}&amount=${funds}`)
+        .then(extractData);
+    }
+
+    function getStatement(parentId) {
+      return $http.put(`${baseUrl}/getStatement?clientId=${parentId}`)
+        .then(extractData);
+    }
+
+    return { getSons, getTemplates, getTasks, getPrize, addFunds };
   }
 }())
