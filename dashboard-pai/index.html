@@ -17,7 +17,7 @@
   <title>AngularJS Boilerplate</title>
 </head>
 
-<body ng-app="aboilerplate" ng-controller="ShellController">
+<body ng-app="aboilerplate" ng-controller="ShellController as $ctrl">
   <header class="site-header">
     <div class="container">
       <div class="row">
@@ -32,25 +32,25 @@
               
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto primary-menu">
-              <li class="nav-item">
-                <a class="nav-link active" href="#!/atividades">
+              <li class="nav-item" ng-class="{active: $ctrl.location('activities') }">
+                <a class="nav-link" href="#!/atividades">
                   <i class="fa fa-list-ul" aria-hidden="true"></i><br/>
                   Atividades
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" ng-class="{active: $ctrl.location('visa') }">
                 <a class="nav-link" href="#">
                   <i class="fa fa-trophy" aria-hidden="true"></i><br/>
                   Premiação
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" ng-class="{active: $ctrl.location('visa') }">
                   <a class="nav-link" href="#">
                       <i class="fa fa-list-alt" aria-hidden="true"></i><br/>
                       Extrato                   
                     </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" ng-class="{active: $ctrl.location('visa') }">
                   <a class="nav-link" href="#">
                       <i class="fa fa-cc-visa" aria-hidden="true"></i><br/>
                       Recarga
