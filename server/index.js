@@ -2,7 +2,8 @@ const express = require('express')
 const config = require('./config.json')
 const model = require('./model.js')
 const app = express()
-const PORT = 1234
+
+const PORT = process.env.PORT ? process.env.PORT : 1234
 
 app.put('/addFunds', (req, res) => {
   var clientId = req.query.clientId
