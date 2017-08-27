@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B81E9511F51D2FD00AB4C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B81E9501F51D2FD00AB4C24 /* AppDelegate.swift */; };
+		6B81E9561F51D2FD00AB4C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81E9541F51D2FD00AB4C24 /* Main.storyboard */; };
+		6B81E9581F51D2FD00AB4C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B81E9571F51D2FD00AB4C24 /* Assets.xcassets */; };
+		6B81E95B1F51D2FD00AB4C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B81E9591F51D2FD00AB4C24 /* LaunchScreen.storyboard */; };
+		6B81E9661F51D2FD00AB4C24 /* MesadaInteligenteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B81E9651F51D2FD00AB4C24 /* MesadaInteligenteTests.swift */; };
+		6B81E9711F51D2FD00AB4C24 /* MesadaInteligenteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B81E9701F51D2FD00AB4C24 /* MesadaInteligenteUITests.swift */; };
+		6B81E97F1F51F6B500AB4C24 /* CheckListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B81E97E1F51F6B500AB4C24 /* CheckListViewController.swift */; };
+		6B81E9891F52173C00AB4C24 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B81E9881F52173C00AB4C24 /* GoalsViewController.swift */; };
+		6B81E98E1F521C3900AB4C24 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B81E98D1F521C3900AB4C24 /* KDCircularProgress.swift */; };
+		6B81E9A21F525E8400AB4C24 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B81E9A11F525E8400AB4C24 /* GroupsViewController.swift */; };
+		6B81E9A61F526A0500AB4C24 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B81E9A51F526A0500AB4C24 /* GoogleService-Info.plist */; };
+		6BC5566D1F52727600ECBA13 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC5566C1F52727600ECBA13 /* TaskTableViewCell.swift */; };
+		6BC5566F1F52829000ECBA13 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC5566E1F52829000ECBA13 /* Task.swift */; };
+		6BC556711F5292FE00ECBA13 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC556701F5292FE00ECBA13 /* Score.swift */; };
+		6BC556731F5297A400ECBA13 /* ExtratoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC556721F5297A400ECBA13 /* ExtratoTableViewController.swift */; };
+		F45990FA4A03C0CC3ECFC0F8 /* Pods_MesadaInteligente.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB00A7C6BE0632C81E9A8EB5 /* Pods_MesadaInteligente.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B81E9621F51D2FD00AB4C24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B81E9451F51D2FC00AB4C24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B81E94C1F51D2FC00AB4C24;
+			remoteInfo = MesadaInteligente;
+		};
+		6B81E96D1F51D2FD00AB4C24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B81E9451F51D2FC00AB4C24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B81E94C1F51D2FC00AB4C24;
+			remoteInfo = MesadaInteligente;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E9BC3B30CCA673166C57F48 /* Pods_MesadaInteligente_MesadaInteligenteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MesadaInteligente_MesadaInteligenteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B81E94D1F51D2FD00AB4C24 /* MesadaInteligente.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MesadaInteligente.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B81E9501F51D2FD00AB4C24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6B81E9551F51D2FD00AB4C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6B81E9571F51D2FD00AB4C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B81E95A1F51D2FD00AB4C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B81E95C1F51D2FD00AB4C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B81E9611F51D2FD00AB4C24 /* MesadaInteligenteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MesadaInteligenteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B81E9651F51D2FD00AB4C24 /* MesadaInteligenteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesadaInteligenteTests.swift; sourceTree = "<group>"; };
+		6B81E9671F51D2FD00AB4C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B81E96C1F51D2FD00AB4C24 /* MesadaInteligenteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MesadaInteligenteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B81E9701F51D2FD00AB4C24 /* MesadaInteligenteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesadaInteligenteUITests.swift; sourceTree = "<group>"; };
+		6B81E9721F51D2FD00AB4C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B81E97E1F51F6B500AB4C24 /* CheckListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckListViewController.swift; sourceTree = "<group>"; };
+		6B81E9881F52173C00AB4C24 /* GoalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
+		6B81E98D1F521C3900AB4C24 /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
+		6B81E9A11F525E8400AB4C24 /* GroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		6B81E9A51F526A0500AB4C24 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6BC5566C1F52727600ECBA13 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		6BC5566E1F52829000ECBA13 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		6BC556701F5292FE00ECBA13 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		6BC556721F5297A400ECBA13 /* ExtratoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtratoTableViewController.swift; sourceTree = "<group>"; };
+		BC92172D85027C1C51C8F971 /* Pods-MesadaInteligente.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MesadaInteligente.release.xcconfig"; path = "Pods/Target Support Files/Pods-MesadaInteligente/Pods-MesadaInteligente.release.xcconfig"; sourceTree = "<group>"; };
+		BEF348603AE769B7960B6D3D /* Pods-MesadaInteligente.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MesadaInteligente.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MesadaInteligente/Pods-MesadaInteligente.debug.xcconfig"; sourceTree = "<group>"; };
+		EB00A7C6BE0632C81E9A8EB5 /* Pods_MesadaInteligente.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MesadaInteligente.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B81E94A1F51D2FC00AB4C24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F45990FA4A03C0CC3ECFC0F8 /* Pods_MesadaInteligente.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B81E95E1F51D2FD00AB4C24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B81E9691F51D2FD00AB4C24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47584CDB502EF95F925B860D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB00A7C6BE0632C81E9A8EB5 /* Pods_MesadaInteligente.framework */,
+				0E9BC3B30CCA673166C57F48 /* Pods_MesadaInteligente_MesadaInteligenteTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49EB44CE3F0F1447ECBA5D9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEF348603AE769B7960B6D3D /* Pods-MesadaInteligente.debug.xcconfig */,
+				BC92172D85027C1C51C8F971 /* Pods-MesadaInteligente.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6B81E9441F51D2FC00AB4C24 = {
+			isa = PBXGroup;
+			children = (
+				6B81E94F1F51D2FD00AB4C24 /* MesadaInteligente */,
+				6B81E9641F51D2FD00AB4C24 /* MesadaInteligenteTests */,
+				6B81E96F1F51D2FD00AB4C24 /* MesadaInteligenteUITests */,
+				6B81E94E1F51D2FD00AB4C24 /* Products */,
+				49EB44CE3F0F1447ECBA5D9C /* Pods */,
+				47584CDB502EF95F925B860D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6B81E94E1F51D2FD00AB4C24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B81E94D1F51D2FD00AB4C24 /* MesadaInteligente.app */,
+				6B81E9611F51D2FD00AB4C24 /* MesadaInteligenteTests.xctest */,
+				6B81E96C1F51D2FD00AB4C24 /* MesadaInteligenteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B81E94F1F51D2FD00AB4C24 /* MesadaInteligente */ = {
+			isa = PBXGroup;
+			children = (
+				6BC5566E1F52829000ECBA13 /* Task.swift */,
+				6B81E9A51F526A0500AB4C24 /* GoogleService-Info.plist */,
+				6B81E98D1F521C3900AB4C24 /* KDCircularProgress.swift */,
+				6B81E9501F51D2FD00AB4C24 /* AppDelegate.swift */,
+				6B81E9541F51D2FD00AB4C24 /* Main.storyboard */,
+				6B81E9571F51D2FD00AB4C24 /* Assets.xcassets */,
+				6B81E9591F51D2FD00AB4C24 /* LaunchScreen.storyboard */,
+				6B81E95C1F51D2FD00AB4C24 /* Info.plist */,
+				6B81E97E1F51F6B500AB4C24 /* CheckListViewController.swift */,
+				6B81E9881F52173C00AB4C24 /* GoalsViewController.swift */,
+				6B81E9A11F525E8400AB4C24 /* GroupsViewController.swift */,
+				6BC5566C1F52727600ECBA13 /* TaskTableViewCell.swift */,
+				6BC556701F5292FE00ECBA13 /* Score.swift */,
+				6BC556721F5297A400ECBA13 /* ExtratoTableViewController.swift */,
+			);
+			path = MesadaInteligente;
+			sourceTree = "<group>";
+		};
+		6B81E9641F51D2FD00AB4C24 /* MesadaInteligenteTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B81E9651F51D2FD00AB4C24 /* MesadaInteligenteTests.swift */,
+				6B81E9671F51D2FD00AB4C24 /* Info.plist */,
+			);
+			path = MesadaInteligenteTests;
+			sourceTree = "<group>";
+		};
+		6B81E96F1F51D2FD00AB4C24 /* MesadaInteligenteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6B81E9701F51D2FD00AB4C24 /* MesadaInteligenteUITests.swift */,
+				6B81E9721F51D2FD00AB4C24 /* Info.plist */,
+			);
+			path = MesadaInteligenteUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B81E94C1F51D2FC00AB4C24 /* MesadaInteligente */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B81E9751F51D2FD00AB4C24 /* Build configuration list for PBXNativeTarget "MesadaInteligente" */;
+			buildPhases = (
+				1F1AA14C3C990336688A7AC7 /* [CP] Check Pods Manifest.lock */,
+				6B81E9491F51D2FC00AB4C24 /* Sources */,
+				6B81E94A1F51D2FC00AB4C24 /* Frameworks */,
+				6B81E94B1F51D2FC00AB4C24 /* Resources */,
+				3381AF6C44EDEAA5A4AA66D2 /* [CP] Embed Pods Frameworks */,
+				9DB30E158FECFD780F9FDFC5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MesadaInteligente;
+			productName = MesadaInteligente;
+			productReference = 6B81E94D1F51D2FD00AB4C24 /* MesadaInteligente.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6B81E9601F51D2FD00AB4C24 /* MesadaInteligenteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B81E9781F51D2FD00AB4C24 /* Build configuration list for PBXNativeTarget "MesadaInteligenteTests" */;
+			buildPhases = (
+				6B81E95D1F51D2FD00AB4C24 /* Sources */,
+				6B81E95E1F51D2FD00AB4C24 /* Frameworks */,
+				6B81E95F1F51D2FD00AB4C24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B81E9631F51D2FD00AB4C24 /* PBXTargetDependency */,
+			);
+			name = MesadaInteligenteTests;
+			productName = MesadaInteligenteTests;
+			productReference = 6B81E9611F51D2FD00AB4C24 /* MesadaInteligenteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6B81E96B1F51D2FD00AB4C24 /* MesadaInteligenteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B81E97B1F51D2FD00AB4C24 /* Build configuration list for PBXNativeTarget "MesadaInteligenteUITests" */;
+			buildPhases = (
+				6B81E9681F51D2FD00AB4C24 /* Sources */,
+				6B81E9691F51D2FD00AB4C24 /* Frameworks */,
+				6B81E96A1F51D2FD00AB4C24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B81E96E1F51D2FD00AB4C24 /* PBXTargetDependency */,
+			);
+			name = MesadaInteligenteUITests;
+			productName = MesadaInteligenteUITests;
+			productReference = 6B81E96C1F51D2FD00AB4C24 /* MesadaInteligenteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B81E9451F51D2FC00AB4C24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Ulysses Rocha";
+				TargetAttributes = {
+					6B81E94C1F51D2FC00AB4C24 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = TYKKBUTKF7;
+						ProvisioningStyle = Automatic;
+					};
+					6B81E9601F51D2FD00AB4C24 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6B81E94C1F51D2FC00AB4C24;
+					};
+					6B81E96B1F51D2FD00AB4C24 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6B81E94C1F51D2FC00AB4C24;
+					};
+				};
+			};
+			buildConfigurationList = 6B81E9481F51D2FC00AB4C24 /* Build configuration list for PBXProject "MesadaInteligente" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6B81E9441F51D2FC00AB4C24;
+			productRefGroup = 6B81E94E1F51D2FD00AB4C24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B81E94C1F51D2FC00AB4C24 /* MesadaInteligente */,
+				6B81E9601F51D2FD00AB4C24 /* MesadaInteligenteTests */,
+				6B81E96B1F51D2FD00AB4C24 /* MesadaInteligenteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B81E94B1F51D2FC00AB4C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B81E95B1F51D2FD00AB4C24 /* LaunchScreen.storyboard in Resources */,
+				6B81E9A61F526A0500AB4C24 /* GoogleService-Info.plist in Resources */,
+				6B81E9581F51D2FD00AB4C24 /* Assets.xcassets in Resources */,
+				6B81E9561F51D2FD00AB4C24 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B81E95F1F51D2FD00AB4C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B81E96A1F51D2FD00AB4C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F1AA14C3C990336688A7AC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MesadaInteligente-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3381AF6C44EDEAA5A4AA66D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MesadaInteligente/Pods-MesadaInteligente-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework",
+				"${BUILT_PRODUCTS_DIR}/SACountingLabel/SACountingLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13Checkbox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SACountingLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MesadaInteligente/Pods-MesadaInteligente-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DB30E158FECFD780F9FDFC5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MesadaInteligente/Pods-MesadaInteligente-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B81E9491F51D2FC00AB4C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B81E98E1F521C3900AB4C24 /* KDCircularProgress.swift in Sources */,
+				6B81E97F1F51F6B500AB4C24 /* CheckListViewController.swift in Sources */,
+				6BC556711F5292FE00ECBA13 /* Score.swift in Sources */,
+				6BC5566D1F52727600ECBA13 /* TaskTableViewCell.swift in Sources */,
+				6B81E9511F51D2FD00AB4C24 /* AppDelegate.swift in Sources */,
+				6B81E9891F52173C00AB4C24 /* GoalsViewController.swift in Sources */,
+				6BC556731F5297A400ECBA13 /* ExtratoTableViewController.swift in Sources */,
+				6B81E9A21F525E8400AB4C24 /* GroupsViewController.swift in Sources */,
+				6BC5566F1F52829000ECBA13 /* Task.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B81E95D1F51D2FD00AB4C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B81E9661F51D2FD00AB4C24 /* MesadaInteligenteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B81E9681F51D2FD00AB4C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B81E9711F51D2FD00AB4C24 /* MesadaInteligenteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B81E9631F51D2FD00AB4C24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B81E94C1F51D2FC00AB4C24 /* MesadaInteligente */;
+			targetProxy = 6B81E9621F51D2FD00AB4C24 /* PBXContainerItemProxy */;
+		};
+		6B81E96E1F51D2FD00AB4C24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B81E94C1F51D2FC00AB4C24 /* MesadaInteligente */;
+			targetProxy = 6B81E96D1F51D2FD00AB4C24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B81E9541F51D2FD00AB4C24 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B81E9551F51D2FD00AB4C24 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6B81E9591F51D2FD00AB4C24 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B81E95A1F51D2FD00AB4C24 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B81E9731F51D2FD00AB4C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6B81E9741F51D2FD00AB4C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B81E9761F51D2FD00AB4C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEF348603AE769B7960B6D3D /* Pods-MesadaInteligente.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TYKKBUTKF7;
+				INFOPLIST_FILE = MesadaInteligente/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = scritpcoin.MesadaInteligente;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6B81E9771F51D2FD00AB4C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC92172D85027C1C51C8F971 /* Pods-MesadaInteligente.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TYKKBUTKF7;
+				INFOPLIST_FILE = MesadaInteligente/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = scritpcoin.MesadaInteligente;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		6B81E9791F51D2FD00AB4C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MesadaInteligenteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = scritpcoin.MesadaInteligenteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MesadaInteligente.app/MesadaInteligente";
+			};
+			name = Debug;
+		};
+		6B81E97A1F51D2FD00AB4C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MesadaInteligenteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = scritpcoin.MesadaInteligenteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MesadaInteligente.app/MesadaInteligente";
+			};
+			name = Release;
+		};
+		6B81E97C1F51D2FD00AB4C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = MesadaInteligenteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = scritpcoin.MesadaInteligenteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MesadaInteligente;
+			};
+			name = Debug;
+		};
+		6B81E97D1F51D2FD00AB4C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = MesadaInteligenteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = scritpcoin.MesadaInteligenteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MesadaInteligente;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B81E9481F51D2FC00AB4C24 /* Build configuration list for PBXProject "MesadaInteligente" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B81E9731F51D2FD00AB4C24 /* Debug */,
+				6B81E9741F51D2FD00AB4C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B81E9751F51D2FD00AB4C24 /* Build configuration list for PBXNativeTarget "MesadaInteligente" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B81E9761F51D2FD00AB4C24 /* Debug */,
+				6B81E9771F51D2FD00AB4C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B81E9781F51D2FD00AB4C24 /* Build configuration list for PBXNativeTarget "MesadaInteligenteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B81E9791F51D2FD00AB4C24 /* Debug */,
+				6B81E97A1F51D2FD00AB4C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B81E97B1F51D2FD00AB4C24 /* Build configuration list for PBXNativeTarget "MesadaInteligenteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B81E97C1F51D2FD00AB4C24 /* Debug */,
+				6B81E97D1F51D2FD00AB4C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B81E9451F51D2FC00AB4C24 /* Project object */;
+}
