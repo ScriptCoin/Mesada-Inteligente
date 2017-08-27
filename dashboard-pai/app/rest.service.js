@@ -17,10 +17,14 @@
       return $http.get('/json-models/templates.model.json').then(extractData);
     }
 
+    function getPrize(userId) {
+      return $http.get('/json-models/prize.model.json').then(extractData);
+    }
+
     function extractData(response) {
       return response.data;
     }
 
-    return { getSons, getTemplates, getTasks };
+    return { getSons, getTemplates, getTasks, getPrize };
   }
 }())

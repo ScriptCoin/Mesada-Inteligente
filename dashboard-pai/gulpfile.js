@@ -8,6 +8,7 @@ const plumber = require('gulp-plumber');
 const concat = require('gulp-concat');
 const gulpsync = require('gulp-sync')(gulp);
 const webserver = require('gulp-webserver');
+const watch = require('gulp-watch');
 
 const paths = {
   sass: './assets/scss/**/*.scss',
@@ -141,8 +142,13 @@ gulp.task('serve', function () {
 
 // Rerun the task when a file changes
 gulp.task('watch', ['build', 'serve'], function () {
-  gulp.watch('./assets/scss/**/*.scss', ['build:assets', 'build:css']);
-  gulp.watch('./app/**/*', ['build:js:dev']);
+  // if you'd rather rerun the whole task, you can do this:
+  watch('./assets/scss/**/*.scss', function () {
+    gulp.start('build:assets', 'build:css');
+  });
+  watch('./app/**/*', function () {
+    gulp.start('build:js:dev');
+  });
 });
 
 gulp.task('default', ['watch']);

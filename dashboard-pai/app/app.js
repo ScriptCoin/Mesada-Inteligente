@@ -24,6 +24,12 @@
           controller: 'TasksController',
           controllerAs: '$ctrl'
         })
+        .when('/premiacao', {
+          name: 'prize',
+          templateUrl: 'app/page-prize/prize.html',
+          controller: 'PrizeController',
+          controllerAs: '$ctrl'
+        })
         .when('/not-done', {
           name: 'not-done',
           templateUrl: 'app/under-construction/under-construction.html',
@@ -39,7 +45,7 @@
   configureTheme.$inject = ['$mdThemingProvider'];
   function configureTheme($mdThemingProvider) {
     $mdThemingProvider.theme('default')
-      .primaryPalette('light-green')
+      .primaryPalette('blue')
       .accentPalette('red');
   }
 }());

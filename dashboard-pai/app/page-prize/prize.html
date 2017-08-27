@@ -1,0 +1,25 @@
+<div id="page-prize">
+  <h1 class="page-title">
+    Premiação
+  </h1>
+
+  <hr>
+
+  <section ng-if="!$ctrl.prize" class="add-prize-container">
+    <md-button class="md-raised md-primary">
+      <fa-icon icon="plus"></fa-icon> Cadastrar Premiação</md-button>
+  </section>
+
+  <section ng-if="$ctrl.prize" class="prize-container row justify-content-center">
+    <md-card class="col-md-10 col-lg-8">
+      <img ng-src="{{$ctrl.prize.image}}" class="md-card-image" alt="Washed Out">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">{{$ctrl.prize.name}}</span>
+          <span class="md-subhead"><fa-icon icon="calendar"></fa-icon> Data limite: {{$ctrl.formatDate($ctrl.prize.dueDate)}}</span>
+        </md-card-title-text>
+      </md-card-title>
+    </md-card>
+  </section>
+
+</div>
