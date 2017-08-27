@@ -2,8 +2,8 @@
   angular.module('aboilerplate')
     .controller('StatementController', StatementController);
 
-  StatementController.$inject = ['RestService'];
-  function StatementController(RestService) {
+  StatementController.$inject = ['RestService', 'StatementItem'];
+  function StatementController(RestService, StatementItem) {
     var $ctrl = this;
 
     $ctrl.statementData = null;
@@ -21,7 +21,9 @@
 
     function handleError(error) {
       console.error('Error', error);
-      alert(`Desculpe, ocorreu um erro. Tente novamente mais tarde.\n\nDetalhes: ${error || 'serviço indisponível'}`)
+      var message = error && error.data ? error.data.error.message : 'serviço indisponível';
+      fetchData(); // tenta de novo
+      // alert(`Desculpe, ocorreu um erro. Tente novamente mais tarde.\n\nDetalhes: ${message}`);
     }
 
     function setStatementData(statementData) {
@@ -32,7 +34,7 @@
 
     // helpers
     function formatDate(date) {
-      return moment(date).format('L');
+      return moment(date).format('DD/mm/YY HH:mm:ss');
     }
 
     function getTemplateTasksSummary(template) {

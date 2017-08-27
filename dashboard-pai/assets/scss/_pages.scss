@@ -35,6 +35,9 @@
   .transaction-header {
     width: 100%;
   }
+  td {
+    white-space: nowrap;
+  }
   .value {
     font-weight: bold;
     &.positive {
