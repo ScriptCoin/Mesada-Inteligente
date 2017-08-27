@@ -61,11 +61,13 @@
 
   <hr>
 
-  <section class="row justify-content-center">
-    <p>
+  <div class="row">
+    <p class="col-12 col-sm-10 col-md-8 col-lg-6">
       <strong>João</strong> fechou o mês com <strong>{{$ctrl.score}}</strong> pontos,
       então ele merece receber <strong>{{$ctrl.scoreToMoney($ctrl.score)|currency}}</strong>
     </p>
+  </div>
+  <section class="row justify-content-center">
     <div class="col-12 col-sm-10 col-md-8 col-lg-6">
       <div class="input-group input-group-lg">
         <span type="text"

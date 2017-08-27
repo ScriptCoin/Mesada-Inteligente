@@ -26,7 +26,7 @@
     }
 
     function scoreToMoney(score) {
-      return ($ctrl.mesada / 1000) * score;
+      return Math.floor(($ctrl.mesada / 1000) * score);
     }
 
     function transfer(value) {
