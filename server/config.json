@@ -1,0 +1,12 @@
+{
+  "visa": {
+    "apiKey": "D6O18XFBGIGP1KAFQIKO214LkB70xQ1WE-Kcbr-FeiBySrU3M",
+    "sharedSecret": "K1nfPVMi8hj@zvCbnDUsMuyu3A}I2LBp-axN0402",
+    "visaUrl": "https://sandbox.api.visa.com/"
+  },
+  "agilitas": {
+    "url": "https://api-visa.sensedia.com/sandbox/visa/agillitas/v1/",
+    "client_id": "8ac24ab5-038f-3697-ae9b-0c82dc485276",
+    "access_token": "60fa2b16-e196-32ed-b1a9-e3499ccf271c"
+  }
+}
