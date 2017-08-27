@@ -8,6 +8,7 @@
   
   <section class="row cards-container">
     <div class="col-12 col-md-6 my-card">
+      <h2 class="card-title">Cartão de origem</h2>
       <div class="card-container">
         <div class="card visa identified">
           <div class="front">
@@ -18,7 +19,7 @@
             <div class="lower">
               <div class="shiny"></div>
               <div class="cvc display">••••</div>
-              <div class="number display">•••• •••• •••• 4444</div>
+              <div class="number display">•••• •••• •••• 2379</div>
               <div class="name display">Roberto Amaral</div>
               <div class="expiry display">••/••</div>
             </div>
@@ -32,6 +33,7 @@
       </div>
     </div>
     <div class="col-12 col-md-6 dependent-card">
+      <h2 class="card-title">Cartão de destino</h2>
       <div class="card-container">
         <div class="card universe identified">
           <div class="front">
@@ -57,19 +59,22 @@
     </div>
   </section>
 
+  <hr>
+
   <section class="row justify-content-center">
     <p>
-      <strong>{{$ctrl.dependent.firstname}} fechou o mês com TANTOS pontos</strong>
+      <strong>João</strong> fechou o mês com <strong>{{$ctrl.score}}</strong> pontos,
+      então ele merece receber <strong>{{$ctrl.scoreToMoney($ctrl.score)|currency}}</strong>
     </p>
     <div class="col-12 col-sm-10 col-md-8 col-lg-6">
       <div class="input-group input-group-lg">
-        <span class="input-group-addon" id="sizing-addon1">R$</span>
-        <input type="text"
-          class="form-control"
+        <span type="text"
+          class="value-input form-control"
           placeholder="Recarregar valor"
-          aria-label="Recarregar valor">
+          aria-label="Recarregar valor">{{$ctrl.value|currency}}</span>
         <span class="input-group-btn">
-          <button class="btn btn-secondary" type="button">Go!</button>
+          <button class="btn btn-secondary" type="button"
+            ng-click="$ctrl.transfer($ctrl.value)">Fazer transferência</button>
         </span>
       </div>
     </div>
