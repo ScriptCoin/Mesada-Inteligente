@@ -14,8 +14,10 @@
     }
 
     function fetchData() {
+      $ctrl.isLoading = true;
       RestService.getStatement(1)
         .then(setStatementData)
+        .then(() => $ctrl.isLoading = false)
         .catch(handleError);
     }
 

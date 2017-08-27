@@ -1,5 +1,5 @@
 angular.module('aboilerplate')
-  .controller('HomeController', ['$scope', '$rootScope', 'RestService', function HomeController($scope, $rootScope, RestService) {
+  .controller('HomeController', ['$scope', '$rootScope', 'RestService', 'FirebaseService', function HomeController($scope, $rootScope, RestService, FirebaseService) {
     var $ctrl = this;
     $ctrl.todayTasks = null;
 
@@ -8,9 +8,10 @@ angular.module('aboilerplate')
     }
 
     function fetchData() {
-      RestService.getTasks(2).then(tasks => {
-          setTasks(tasks);
-      });
+      $ctrl.isLoading = true;
+      $ctrl.todayTasks = FirebaseService.getTasks(1, 2);
+      $ctrl.todayTasks.$loaded()
+        .then(() => $ctrl.isLoading = false);
     }
     function setTasks(tasks) {
       $ctrl.todayTasks = tasks;

@@ -3,9 +3,11 @@
     Extrato
   </h1>
 
-  <hr>
+  <hr ng-if="!$ctrl.isLoading">
+  <md-progress-linear ng-if="$ctrl.isLoading" md-mode="indeterminate"></md-progress-linear>
 
-  <table class="table table-striped table-sm">
+
+  <table class="table table-striped">
     <thead>
       <tr>
         <th>Data</th>

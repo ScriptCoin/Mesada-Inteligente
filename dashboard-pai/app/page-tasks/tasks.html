@@ -3,7 +3,8 @@
     Atividades
   </h1>
 
-  <hr>
+  <hr ng-if="!$ctrl.isLoading">
+  <md-progress-linear ng-if="$ctrl.isLoading" md-mode="indeterminate"></md-progress-linear>
 
   <pre>{{$scope.tasks|json}}</pre>
 
@@ -34,10 +35,21 @@
     </div>
   </section>
 
-  <tasks-card-with-table data-title="'Hoje'" tasks="$ctrl.todayTasks"></tasks-card-with-table>
+  <div class="row justify-content-center">
+    <tasks-card-with-table
+      class="col-12 col-md-8"
+      data-title="'Hoje'"
+      tasks="$ctrl.todayTasks"></tasks-card-with-table>
+  </div>
 
-  <tasks-card-with-table data-title="'Esta semana'" tasks="$ctrl.todayTasks"></tasks-card-with-table>
-  
-  <tasks-card-with-table data-title="'Mais antigos'" tasks="$ctrl.todayTasks"></tasks-card-with-table>
-
+  <div class="row justify-content-center">
+    <tasks-card-with-table
+      class="col-12 col-md-6"
+      data-title="'Esta semana'"
+      tasks="$ctrl.todayTasks"></tasks-card-with-table>
+    <tasks-card-with-table
+      class="col-12 col-md-6"
+      data-title="'Mais antigos'"
+      tasks="$ctrl.todayTasks"></tasks-card-with-table>
+  </div>
 </div>

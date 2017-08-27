@@ -31,6 +31,10 @@
   }
 }
 
+#page-recharge {
+  margin-bottom: 5em;
+}
+
 #page-statement {
   .transaction-header {
     width: 100%;
@@ -40,6 +44,7 @@
   }
   .value {
     font-weight: bold;
+    text-align: right;
     &.positive {
       color: #080;
     }

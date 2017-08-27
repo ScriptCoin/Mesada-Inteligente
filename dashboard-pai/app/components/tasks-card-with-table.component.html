@@ -1,4 +1,4 @@
-<md-card>
+<md-card ng-if="$ctrl.tasks.groups.length">
   <md-card-title>
     <md-card-title-text>{{$ctrl.title}}</md-card-title-text>
   </md-card-title>
@@ -11,10 +11,16 @@
           <th><span class="sr-only">Contestar</span></th>
         </tr>
       </thead>
-      <tbody>
-        <tr ng-repeat="task in $ctrl.tasks">
+      <tbody ng-repeat="group in $ctrl.tasks.groups">
+        <tr>
+          <th colspan="3">{{group.name}}</th>
+        </tr>
+        <tr ng-if="!!task" ng-repeat="task in group.tasks">
           <td><md-checkbox ng-model="task.completed" disabled></md-checkbox></td>
-          <td>{{task.title}}</td>
+          <td>
+            {{task.title}}
+            <span ng-if="task.contested" class="badge badge-danger">contestado</span>
+          </td>
           <td>
             <md-button ng-disabled="!task.completed || task.contested"
               ng-click="$ctrl.contest(task)"
@@ -25,3 +31,5 @@
     </table>
   </md-card-content>
 </md-card>
+
+<!-- <pre><code>{{$ctrl.tasks|json}}</code></pre> -->

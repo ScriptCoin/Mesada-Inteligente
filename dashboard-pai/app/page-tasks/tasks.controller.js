@@ -16,13 +16,10 @@
     }
 
     function fetchData() {
-      $ctrl.tasks = FirebaseService.getTasks(1, 2);
-      RestService.getTasks(2).then(tasks => {
-        if (!tasks)
-          loadTemplates();
-        else
-          setTasks(tasks);
-      });
+      $ctrl.isLoading = true;
+      $ctrl.todayTasks = FirebaseService.getTasks(1, 2);
+      $ctrl.todayTasks.$loaded()
+        .then(() => $ctrl.isLoading = false);
     }
 
     function loadTemplates() {

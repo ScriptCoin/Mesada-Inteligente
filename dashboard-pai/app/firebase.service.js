@@ -4,8 +4,13 @@
   FirebaseService.$inject = ['RestService', '$q', '$firebaseObject', '$firebaseArray'];
   function FirebaseService(RestService, $q, $firebaseObject, $firebaseArray) {
     function getTasks(parentId, dependentId) {
-      var arrayRef = firebase.database().ref(`/tasks`);
-      return $firebaseObject(arrayRef);
+      var objRef = firebase.database().ref(`/tasks`);
+      return $firebaseObject(objRef);
+    }
+
+    function getScore(parentId, dependentId) {
+      var objRef = firebase.database().ref(`/score`);
+      return $firebaseObject(objRef);
     }
 
     function initDb() {
@@ -23,6 +28,6 @@
 
     // initDb();
 
-    return { getTasks };
+    return { getTasks, getScore };
   }
 }());

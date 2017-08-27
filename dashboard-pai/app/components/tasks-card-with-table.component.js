@@ -15,12 +15,11 @@
   function TasksCardWithTable($element) {
     const $ctrl = this;
 
+    $ctrl.contest = contest;
+
     function init() { }
 
-    function onChanges(changes) {
-      if (changes.tasks)
-        $ctrl.tasks = fixTasks($ctrl.tasks);
-    }
+    function onChanges(changes) { }
 
     function fixTasks(tasks) {
       tasks = tasks || [];
@@ -32,6 +31,9 @@
 
     function contest(task) {
       $ctrl.revoke && $ctrl.revoke(task);
+      task.contested = true;
+      task.completed = false;
+      $ctrl.tasks.$save();
     }
 
     $ctrl.$onInit = init;
