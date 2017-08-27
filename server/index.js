@@ -9,7 +9,7 @@ const PORT = process.env.PORT ? process.env.PORT : 1234
 
 app.options('*', cors())
 
-app.put('/addFunds', (req, res) => {
+app.put('/addFunds', cors(), (req, res) => {
   var clientId = req.query.clientId
   var amount = parseFloat(req.query.amount)
 
@@ -25,7 +25,7 @@ app.put('/addFunds', (req, res) => {
 })
 
 
-app.get('/getStatement', (req, res) => {
+app.get('/getStatement', cors(), (req, res) => {
   var clientId = req.query.clientId
   model.get_card_last_30_days(clientId).then(function(data) {
     res.json(data)
